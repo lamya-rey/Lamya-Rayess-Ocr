@@ -19,7 +19,7 @@ jobs:
         with:
           dotnet-version: '6.0.1'
       - run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml
-      - run: dotnet publish ./Lamya.Rayess.Ocr.Console/Lamya.Rayess.Ocr.Console.csproj --self-contained true --output ./win-x64/ocr -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
+      - run: dotnet publish ./src/Lamya.Rayess.Ocr.Console/Lamya.Rayess.Ocr.Console.csproj --self-contained true --output ./win-x64/ocr -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
       - name: Upload Console Build Artifact
         uses: actions/upload-artifact@v2
         with:
