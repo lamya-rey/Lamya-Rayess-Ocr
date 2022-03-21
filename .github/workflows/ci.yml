@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.1'
+          dotnet-version: '6.0.100'
       - run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml
       - run: dotnet publish ./src/Lamya.Rayess.Ocr.Console/Lamya.Rayess.Ocr.Console.csproj --self-contained true --output ./win-x64/ocr -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
       - name: Upload Console Build Artifact
